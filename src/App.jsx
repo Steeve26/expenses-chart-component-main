@@ -3,6 +3,8 @@ import './App.css'
 import data from './data/data.json'
 
 function App() {
+  const day = new Date()
+  const weekday = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][day.getDay()].toLowerCase()
 
   return (
     <div className="App">
@@ -22,7 +24,9 @@ function App() {
             data.map((dataPoint, index) => {
               return (
                 <div key={index} className='bar-container'>
-                  <div className="bar" style={{height: `${dataPoint.amount * 1.55}px`}}></div>
+                  <div className={`bar ${weekday === dataPoint.day ? 'highlight' : ''}`} style={{height: `${dataPoint.amount * 1.55}px`}}>
+                    <span className="tooltip">${dataPoint.amount}</span>
+                  </div>
                   <p>{dataPoint.day}</p> 
                 </div>
               )

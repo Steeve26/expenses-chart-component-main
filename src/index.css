@@ -12,3 +12,8 @@ body {
   background: #f8e9dd;
   font-family: dm sans;
 }
+footer {
+  position: absolute;
+  bottom: 1em;
+  text-align: center;
+}
