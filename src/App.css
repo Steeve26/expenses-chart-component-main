@@ -49,13 +49,13 @@
   display: flex;
   gap: 10px;
   border-bottom: 1px solid #e4e4e4;
+  padding-bottom: 14px;
 }
 .bar-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 7.5em;
-  padding-bottom: 14px;
 }
 .bar-container p {
   font-size: 9px;
